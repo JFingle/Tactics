@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+[CustomEditor(typeof(BoardCreator))]
 
 public class BoardCreatorInspector : Editor {
 
-    [CustomEditor(typeof(BoardCreator))]
 
     public BoardCreator current
     {
