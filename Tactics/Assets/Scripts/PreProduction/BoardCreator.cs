@@ -6,19 +6,15 @@ using System.IO;
 
 
 
-
-
-[SerializeField] GameObject tileViewPrefab;
-[SerializeField] GameObject tileSelectionIndicatorPrefab;
-[SerializeField] int width = 10;
-[SerializeField] int depth = 10;
-[SerializeField] int height = 8;
-[SerializeField] Point pos;
-[SerializeField] LevelData levelData;
-
-
 public class BoardCreator : MonoBehaviour
 {
+    [SerializeField] GameObject tileViewPrefab;
+    [SerializeField] GameObject tileSelectionIndicatorPrefab;
+    [SerializeField] int width = 10;
+    [SerializeField] int depth = 10;
+    [SerializeField] int height = 8;
+    [SerializeField] Point pos;
+    [SerializeField] LevelData levelData;
 
     Transform marker
     {
@@ -171,10 +167,10 @@ public class BoardCreator : MonoBehaviour
     public void Load ()
     {
         Clear();
-        if (LevelData == null)
+        if (levelData == null)
             return;
        
-        foreach (Vector3 v in LevelData.tiles)
+        foreach (Vector3 v in levelData.tiles)
         {
             Tile t = Create();
             t.Load(v);

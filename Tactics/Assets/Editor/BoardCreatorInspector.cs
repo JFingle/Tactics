@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(BoardCreator))]
 
-public class BoardCreatorInspector : MonoBehaviour {
+public class BoardCreatorInspector : Editor {
 
-public BoardCreator current
+    [CustomEditor(typeof(BoardCreator))]
+
+    public BoardCreator current
     {
         get
         {
-            return (BoardCreator)Target;
+            return (BoardCreator)target;
         }
     }
 public override void OnInspectorGUI ()
@@ -35,4 +36,6 @@ public override void OnInspectorGUI ()
         if (GUI.changed)
             current.UpdateMarker();
     }
+
+
 }
