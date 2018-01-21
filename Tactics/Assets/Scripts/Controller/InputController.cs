@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class InputController : MonoBehaviour {
+
+    public static event EventHandler<InfoEventArgs<Point>> moveEvent;
 
     Repeater _hor = new Repeater("Horizontal");
     Repeater _ver = new Repeater("Vertical");
+
+
 
     class Repeater
     {
@@ -50,5 +56,12 @@ public class InputController : MonoBehaviour {
 
         Debug.Log(Input.GetAxisRaw("Horizontal"));
 
+        int x = _hor.Update();
+        int y = _ver.Update();
+        if (x != 0 || y != 0)
+        {
+            if (moveEvent != null)
+                moveEvent(this, new InfoEventArgs<Point>(new Point(x, y)));
+        }
     }
 }
