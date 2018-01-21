@@ -321,7 +321,10 @@
     <Compile Include="Assets\Scripts\Common\Animation\TransformScaleTweener.cs" />
     <Compile Include="Assets\Scripts\Common\Animation\Tweener.cs" />
     <Compile Include="Assets\Scripts\Common\Animation\Vector3Tweener.cs" />
+    <Compile Include="Assets\Scripts\Model\LevelData.cs" />
     <Compile Include="Assets\Scripts\Model\Point.cs" />
+    <Compile Include="Assets\Scripts\PreProduction\BoardCreator.cs" />
+    <Compile Include="Assets\Scripts\View Model\Tile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
