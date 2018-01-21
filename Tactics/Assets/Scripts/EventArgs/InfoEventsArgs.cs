@@ -5,17 +5,17 @@ using System.Collections.Generic;
 
 
 
-public class InfoEventsArgs<T> : EventArgs
+public class InfoEventArgs<T> : EventArgs
 {
 
     public T info;
 
-    public InfoEventsArgs()
+    public InfoEventArgs()
     {
         info = default(T);
     }
 
-    public InfoEventsArgs(T info)
+    public InfoEventArgs(T info)
     {
         this.info = info;
     }
