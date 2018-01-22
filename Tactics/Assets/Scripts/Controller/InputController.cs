@@ -12,6 +12,9 @@ public class InputController : MonoBehaviour
 
     public static event EventHandler<InfoEventArgs<int>> fireEvent;
 
+    string[] _buttons = new string[] { "Fire1", "Fire2", "Fire3" };
+
+
 
     Repeater _hor = new Repeater("Horizontal");
     Repeater _ver = new Repeater("Vertical");
@@ -50,7 +53,6 @@ public class InputController : MonoBehaviour
             return retValue;
         }
 
-        string[] _buttons = new string[] { "Fire1", "Fire2", "Fire3" };
 
     }
 
