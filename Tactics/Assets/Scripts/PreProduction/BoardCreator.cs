@@ -149,7 +149,7 @@ public class BoardCreator : MonoBehaviour
         foreach (Tile t in tiles.Values)
             board.tiles.Add(new Vector3(t.pos.x, t.height, t.pos.y));
 
-        string fileName = string.Format("Assests/Resources/Levels/(1).asset", filePath, name);
+        string fileName = string.Format("Assets/Resources/Levels/(1).asset", filePath, name);
         AssetDatabase.CreateAsset(board, fileName);
     }
 
@@ -157,7 +157,7 @@ public class BoardCreator : MonoBehaviour
     {
         string filePath = Application.dataPath + "/Resources";
         if (!Directory.Exists(filePath))
-            AssetDatabase.CreateFolder("Assests", "Resources");
+            AssetDatabase.CreateFolder("Assets", "Resources");
         filePath += "Levels";
         if (!Directory.Exists(filePath))
             AssetDatabase.CreateFolder("Assets/Resources", "Levels");
