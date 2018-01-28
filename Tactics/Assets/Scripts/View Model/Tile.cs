@@ -41,5 +41,7 @@ public class Tile : MonoBehaviour {
     {
         Load(new Point((int)v.x, (int)v.z), (int)v.y);
     }
-
+    public GameObject content;
+    [HideInInspector] public Tile prev;
+    [HideInInspector] public int distance;
 }
